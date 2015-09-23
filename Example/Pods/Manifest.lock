@@ -1,0 +1,20 @@
+PODS:
+  - CoreUtil (0.1.0)
+  - Expecta (1.0.3)
+  - Specta (1.0.4)
+
+DEPENDENCIES:
+  - CoreUtil (from `../`)
+  - Expecta
+  - Specta
+
+EXTERNAL SOURCES:
+  CoreUtil:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CoreUtil: d09acb65fa07bb8093afda872f8e01ed8ee15bbd
+  Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
+  Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
+
+COCOAPODS: 0.38.2
