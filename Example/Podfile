@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'CoreUtil_Example', :exclusive => true do
+  pod "CoreUtil", :path => "../"
+end
+
+target 'CoreUtil_Tests', :exclusive => true do
+  pod "CoreUtil", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
