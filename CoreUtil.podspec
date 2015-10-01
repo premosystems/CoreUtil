@@ -37,4 +37,37 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  subspecArray = ["All","Blocks","Defines","Environment","Logging","View"]
+    
+    for subspec in subspecArray
+        s.subspec subspec do |spec|
+            spec.source_files = "Classes/#{subspec}/*.{h,m}"
+            
+            if  subspec == "All"
+                for all_subspecs in subspecArray
+                    if  all_subspecs != "All"
+                        spec.dependency "CoreUtil/#{all_subspecs}"
+                    end
+                end
+            end
+            
+            if  subspec == "Environment"
+                spec.dependency "NSString-ZENVersions", "~> 0.1.2"
+            end
+            
+            if  subspec == "Logging"
+                spec.dependency "CoreUtil/Environment"
+                spec.dependency "CocoaLumberjack", "~> 2.0.0"
+                spec.dependency "RMLogFormatter", "~> 0.1.3"
+            end
+            
+            if  subspec == "View"
+                spec.dependency "VTSystemVersion", "~> 0.1"
+                spec.dependency "KPAStoryboardConvenience", "~> 1.0.1"
+            end
+            
+        end
+    end
+    
 end
