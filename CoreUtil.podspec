@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   
-  subspecArray = ["All","Blocks","Defines","Environment","Logging","View"]
+  subspecArray = ["All","Blocks","Defines","Environment","Logging","Networking","View"]
     
     for subspec in subspecArray
         s.subspec subspec do |spec|
@@ -60,6 +60,11 @@ Pod::Spec.new do |s|
                 spec.dependency "CoreUtil/Environment"
                 spec.dependency "CocoaLumberjack", "~> 2.0.0"
                 spec.dependency "RMLogFormatter", "~> 0.1.3"
+            end
+            
+            if  subspec == "Networking"
+                spec.dependency "AFNetworking", "~> 2.6.0"
+                spec.dependency "FXKeychain", "~> 1.5.3"
             end
             
             if  subspec == "View"
