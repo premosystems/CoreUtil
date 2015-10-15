@@ -12,5 +12,7 @@
 
 #endif
 
-#import "UIViewController+CUStoryboardHelper.h"
+#import "UICollectionViewCell+CUStoryboardHelper.h"
 #import "UILocalNotification+CUAdditions.h"
+#import "UITableViewCell+CUStoryboardHelper.h"
+#import "UIViewController+CUStoryboardHelper.h"
