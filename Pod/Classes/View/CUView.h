@@ -15,4 +15,6 @@
 #import "UICollectionViewCell+CUStoryboardHelper.h"
 #import "UILocalNotification+CUAdditions.h"
 #import "UITableViewCell+CUStoryboardHelper.h"
+#import "UIView+ImageAdditions.h"
+#import "UIView+NibAdditions.h"
 #import "UIViewController+CUStoryboardHelper.h"
