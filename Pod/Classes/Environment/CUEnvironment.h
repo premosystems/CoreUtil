@@ -23,6 +23,16 @@
 
 #endif
 
+#if  defined(TEST)
+
+#define kCU_TEST YES
+
+#else
+
+#define kCU_TEST NO
+
+#endif
+
 #if  defined(STAGE)
 
 #define kCU_STAGE YES

@@ -10,6 +10,8 @@
 
 @interface CUKeychain : NSObject
 
++ (void) setBearerToken:(NSDictionary*)value;
++ (NSDictionary*) bearerToken;
 + (void) setAuthToken:(NSString*)value;
 + (NSString*) authToken;
 + (void) setDefaultUsername:(NSString*)value;
