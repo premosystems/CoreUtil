@@ -33,15 +33,15 @@
 + (void) setDefaultUsername:(NSString*)value
 {
 	if (value) {
-		[[FXKeychain defaultKeychain] setObject:value forKey:kCU_DefaultUsernameKey];
+		[[NSUserDefaults standardUserDefaults] setObject:value forKey:kCU_DefaultUsernameKey];
 	}  else {
-		[[FXKeychain defaultKeychain] removeObjectForKey:kCU_DefaultUsernameKey];
+		[[NSUserDefaults standardUserDefaults] removeObjectForKey:kCU_DefaultUsernameKey];
 	}
 }
 
 + (NSString*) defaultUsername
 {
-	return [[FXKeychain defaultKeychain] objectForKey:kCU_DefaultUsernameKey];
+	return [[NSUserDefaults standardUserDefaults] objectForKey:kCU_DefaultUsernameKey];
 }
 
 + (void) setDefaultPassword:(NSString*)value
@@ -61,15 +61,15 @@
 + (void) setCurrentUserId:(id)value
 {
 	if (value) {
-		[[FXKeychain defaultKeychain] setObject:value forKey:kCU_CurrentUserIdKey];
+		[[NSUserDefaults standardUserDefaults] setObject:value forKey:kCU_CurrentUserIdKey];
 	}  else {
-		[[FXKeychain defaultKeychain] removeObjectForKey:kCU_CurrentUserIdKey];
+		[[NSUserDefaults standardUserDefaults] removeObjectForKey:kCU_CurrentUserIdKey];
 	}
 }
 
 + (id) currentUserId
 {
-	return [[FXKeychain defaultKeychain] objectForKey:kCU_CurrentUserIdKey];
+	return [[NSUserDefaults standardUserDefaults] objectForKey:kCU_CurrentUserIdKey];
 }
 
 
