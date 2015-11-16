@@ -107,7 +107,7 @@
 	return value;
 }
 
-+ (void) setAPNSToken:(id)value
++ (void) setAPNSToken:(NSString*)value
 {
 	if (value) {
 		[[NSUserDefaults standardUserDefaults] setObject:value forKey:kCU_APNSTokenKey];
@@ -116,7 +116,7 @@
 	}
 }
 
-+ (id) APNSToken
++ (NSString*) APNSToken
 {
 	id value = [[NSUserDefaults standardUserDefaults] objectForKey:kCU_APNSTokenKey];
 	return value;
