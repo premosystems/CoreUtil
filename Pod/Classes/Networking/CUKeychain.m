@@ -14,6 +14,7 @@
 #define kCU_DefaultUsernameKey @"kCU_DefaultUsernameKey"
 #define kCU_DefaultPasswordKey @"kCU_DefaultPasswordKey"
 #define kCU_CurrentUserIdKey @"kCU_CurrentUserIdKey"
+#define kCU_APNSTokenKey @"kCU_APNSTokenKey"
 
 @implementation CUKeychain
 
@@ -102,8 +103,25 @@
 
 + (id) currentUserId
 {
-	return [[NSUserDefaults standardUserDefaults] objectForKey:kCU_CurrentUserIdKey];
+	id value = [[NSUserDefaults standardUserDefaults] objectForKey:kCU_CurrentUserIdKey];
+	return value;
 }
+
++ (void) setAPNSToken:(id)value
+{
+	if (value) {
+		[[NSUserDefaults standardUserDefaults] setObject:value forKey:kCU_APNSTokenKey];
+	}  else {
+		[[NSUserDefaults standardUserDefaults] removeObjectForKey:kCU_APNSTokenKey];
+	}
+}
+
++ (id) APNSToken
+{
+	id value = [[NSUserDefaults standardUserDefaults] objectForKey:kCU_APNSTokenKey];
+	return value;
+}
+
 
 
 + (BOOL) hasDefaultCredentials

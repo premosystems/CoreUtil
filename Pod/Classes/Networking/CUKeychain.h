@@ -20,6 +20,8 @@
 + (NSString*) defaultPassword;
 + (void) setCurrentUserId:(id)value;
 + (id) currentUserId;
++ (void) setAPNSToken:(id)value;
++ (id) APNSToken;
 
 + (BOOL) hasDefaultCredentials;
 + (void) clearDefaults;
