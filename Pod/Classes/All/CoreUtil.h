@@ -11,6 +11,7 @@
 #endif
 
 #import "CUBlocks.h"
+#import "CUCategories.h"
 #import "CUDefines.h"
 #import "CUEnvironment.h"
 #import "CULogging.h"
