@@ -12,6 +12,8 @@
 
 #endif
 
+typedef void (^CUBlock)(id sender, id result);
+
 typedef void (^CUCompletionBlock)(id sender, BOOL success, NSError *error, id result);
 
 typedef void (^CUStateChangeBlock)(id sender, id oldState, id newState);
