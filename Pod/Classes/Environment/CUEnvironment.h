@@ -13,6 +13,8 @@
 #import "NSBundle+CUVersionAdditions.h"
 
 // BEGIN CONFIG CONVENIENCE DEFINES
+
+// DEBUG
 #if  defined(DEBUG)
 
 #define kCU_DEBUG YES
@@ -23,6 +25,7 @@
 
 #endif
 
+// TEST
 #if  defined(TEST)
 
 #define kCU_TEST YES
@@ -33,6 +36,18 @@
 
 #endif
 
+// QA
+#if  defined(QA)
+
+#define kCU_QA YES
+
+#else
+
+#define kCU_QA NO
+
+#endif
+
+// STAGE
 #if  defined(STAGE)
 
 #define kCU_STAGE YES
@@ -43,7 +58,7 @@
 
 #endif
 
-
+// PRODUCTION
 #if  defined(PRODUCTION)
 
 #define kCU_PRODUCTION YES
