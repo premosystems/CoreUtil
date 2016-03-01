@@ -8,7 +8,6 @@
 
 #ifndef Pods_CUEnvironment_h
 #define Pods_CUEnvironment_h
-#endif
 
 #import "NSBundle+CUVersionAdditions.h"
 
@@ -58,6 +57,17 @@
 
 #endif
 
+// UAT
+#if  defined(UAT)
+
+#define kCU_UAT YES
+
+#else
+
+#define kCU_UAT NO
+
+#endif
+
 // PRODUCTION
 #if  defined(PRODUCTION)
 
@@ -68,3 +78,7 @@
 #define kCU_PRODUCTION NO
 
 #endif
+#endif
+
+
+
