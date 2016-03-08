@@ -11,5 +11,7 @@
 
 #import "NSArray+EnumExtensions.h"
 #import "NSDateFormatter+RailsJSONDate.h"
+#import "NSDecimalNumber+CUCurrencyHelpers.h"
+#import "NSNumber+CUCurrencyHelpers.h"
 
 #endif
