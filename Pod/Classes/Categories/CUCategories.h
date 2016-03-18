@@ -13,5 +13,6 @@
 #import "NSDateFormatter+RailsJSONDate.h"
 #import "NSDecimalNumber+CUCurrencyHelpers.h"
 #import "NSNumber+CUCurrencyHelpers.h"
+#import "NSString+CUValidationHelpers.h"
 
 #endif
